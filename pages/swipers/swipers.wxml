@@ -1,0 +1,5 @@
+<!--pages/swipers/swipers.wxml-->
+<view>
+  <image src='{{swiperimage}}'></image>
+  <text>{{swiperid}}</text>
+</view>

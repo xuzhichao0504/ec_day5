@@ -1,0 +1,58 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 广告轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay interval="3000" duration="3000" circular style="height:350rpx">
+    <block wx:for="{{imgUrls}}" wx:key="img">
+      <swiper-item>
+        <view bindtap='swiperchange' data-swiper='{{item}}'>
+          <image style="width:750rpx" src='{{item.image}}'></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 分类列表 -->
+  <view id="types">
+    <block wx:for="{{typelist}}" wx:key="typelist">
+      <view style='float: left;	padding:10rpx 13rpx;' bindtap='navigateToShop'>
+        <view>
+          <image style='width:150rpx;height:150rpx;' src='/images/{{item.pic}}.png'></image>
+        </view>
+        <view>
+          <text class='item-foot'>{{item.name}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 分类详细列表 -->
+  <view>
+    <block wx:for="{{typelist}}" wx:key="*this">
+      <view class='goodlist'>
+        <view class='good-head' bindtap='navigateToShop'>
+          <text>{{item.name}}</text>
+        </view>
+        <view class='good-body'>
+          <view wx:for="{{item.goods}}">
+            <view class='good-item'>
+              <view class='good-pic' bindtap='navigateToDetail' data-id="{{item.mid}}">
+                <image src='{{item.pic}}' mode="aspectFill"></image>
+              </view>
+              <view class='good-desc'>
+                <text style='display:block'>{{item.title}}</text>
+                <text class='good-price'>${{item.price}}</text>
+                <view class='good-price' hidden="{{!item.isHighlyRecommended}}">推荐</view>
+                 <!-- <view class='good-price' wx:if="{{item.isHighlyRecommended==true}}">推荐</view> -->
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+
+
+
+</view>

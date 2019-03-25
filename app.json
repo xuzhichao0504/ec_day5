@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/goods/goods",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/swipers/swipers",
+    "pages/index/good/good",
+    "pages/index/good/detail/detail"
+    ],
+    "window":{
+      "navigationBarBackgroundColor":"#FF4500",
+      "navigationBarTitleText":"京东电商",
+      "navigationBarTextStyle":"white",
+      "backgroundTextStyle":"dark",
+      "enablePullDownRefresh":true
+    },
+    "tabBar":{   
+      "list":[
+        {
+          "pagePath":"pages/index/index",
+          "text":"首页",
+          "iconPath" :"images/12.png",
+          "selectedIconPath": "images/11.png"
+        },
+        {
+          "pagePath":"pages/goods/goods",
+          "text":"分类",
+          "iconPath": "images/22.png",
+          "selectedIconPath": "images/21.png"
+        },
+        {
+          "pagePath": "pages/cart/cart",
+          "text": "购物车",
+          "iconPath": "images/32.png",
+          "selectedIconPath": "images/31.png"
+        },
+        {
+          "pagePath": "pages/user/user",
+          "text": "用户",
+          "iconPath": "images/42.png",
+          "selectedIconPath": "images/41.png"
+        }
+      ]
+    }
+}
