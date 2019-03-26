@@ -69,8 +69,8 @@ lookcart:function(e){
 ~~~
  addToCart: function (e) {
     var id = this.data.id;
-var good = this.data.good
-var that = this;
+    var good = this.data.good
+    var that = this;
     wx.request({
       url: 'https://xuzhichao.cn/good_addToCart',
       data: {
@@ -81,8 +81,7 @@ var that = this;
         nickName: this.data.nickName,
         id: this.data.id
       },
-      method: 'POST',
-method： // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       })
      }
 ~~~
